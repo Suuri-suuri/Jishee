@@ -1,0 +1,36 @@
+[PROJECT]
+Target=4gobi.HEX
+Development_Mode=
+Processor=0x845F
+ToolSuite=CCS
+
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=4gobi.c;
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+
+[4gobi.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=4gobi.c
+
+[Windows]
+0=0000 4gobi.c 0 0 796 451 3 0
+
+[Opened Files]
+1=C:\Users\User\Documents\Azaa_1\TURSHILT\4gobi.c
+2=C:\Users\User\Documents\Azaa_1\TURSHILT\4gobi.h
+3=

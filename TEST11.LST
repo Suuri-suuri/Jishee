@@ -1,0 +1,307 @@
+CCS PCH C Compiler, Version 3.190, 23458
+
+               Filename: C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.LST
+
+               ROM used: 456 (1%)
+                         Largest free fragment is 456
+               RAM used: 129 (8%) at main() level
+                         130 (8%) worst case
+               Stack:    2 worst case (1 in main + 1 for interrupts)
+
+*
+0000:  GOTO   0100
+*
+0008:  NOP(FFFF)
+000A:  MOVWF  05
+000C:  MOVFF  FD8,06
+0010:  MOVF   FE9,W
+0012:  MOVWF  07
+0014:  MOVF   FEA,W
+0016:  MOVWF  08
+0018:  MOVF   FE1,W
+001A:  MOVWF  09
+001C:  MOVF   FE2,W
+001E:  MOVWF  0A
+0020:  MOVF   FD9,W
+0022:  MOVWF  0B
+0024:  MOVF   FDA,W
+0026:  MOVWF  0C
+0028:  MOVF   FF3,W
+002A:  MOVWF  14
+002C:  MOVF   FF4,W
+002E:  MOVWF  15
+0030:  MOVF   FE0,W
+0032:  MOVWF  0D
+0034:  MOVLB  0
+0036:  MOVF   00,W
+0038:  MOVWF  0F
+003A:  MOVF   01,W
+003C:  MOVWF  10
+003E:  MOVF   02,W
+0040:  MOVWF  11
+0042:  MOVF   03,W
+0044:  MOVWF  12
+0046:  MOVF   04,W
+0048:  MOVWF  13
+004A:  BTFSS  F9D.5
+004C:  GOTO   0056
+0050:  BTFSC  F9E.5
+0052:  GOTO   00A4
+0056:  BTFSS  F9D.3
+0058:  GOTO   0062
+005C:  BTFSC  F9E.3
+005E:  GOTO   00BE
+0062:  MOVF   0F,W
+0064:  MOVWF  00
+0066:  MOVF   10,W
+0068:  MOVWF  01
+006A:  MOVF   11,W
+006C:  MOVWF  02
+006E:  MOVF   12,W
+0070:  MOVWF  03
+0072:  MOVF   13,W
+0074:  MOVWF  04
+0076:  MOVF   0D,W
+0078:  MOVWF  FE0
+007A:  BSF    0D.7
+007C:  MOVF   07,W
+007E:  MOVWF  FE9
+0080:  MOVF   08,W
+0082:  MOVWF  FEA
+0084:  MOVF   09,W
+0086:  MOVWF  FE1
+0088:  MOVF   0A,W
+008A:  MOVWF  FE2
+008C:  MOVF   0B,W
+008E:  MOVWF  FD9
+0090:  MOVF   0C,W
+0092:  MOVWF  FDA
+0094:  MOVF   14,W
+0096:  MOVWF  FF3
+0098:  MOVF   15,W
+009A:  MOVWF  FF4
+009C:  MOVF   05,W
+009E:  MOVFF  06,FD8
+00A2:  RETFIE 0
+....................  #include "C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.h" 
+....................  #include <18F452.h> 
+....................  //////// Standard Header file for the PIC18F452 device ////////////////  
+.................... #device PIC18F452  
+.................... #list  
+....................  
+.................... #device adc=8  
+.................... #use delay(clock=20000000)  
+*
+00D2:  CLRF   FEA
+00D4:  MOVLW  81
+00D6:  MOVWF  FE9
+00D8:  MOVF   FEF,W
+00DA:  BTFSC  FD8.2
+00DC:  GOTO   00FA
+00E0:  MOVLW  06
+00E2:  MOVWF  01
+00E4:  CLRF   00
+00E6:  DECFSZ 00,F
+00E8:  BRA    00E6
+00EA:  DECFSZ 01,F
+00EC:  BRA    00E4
+00EE:  MOVLW  7B
+00F0:  MOVWF  00
+00F2:  DECFSZ 00,F
+00F4:  BRA    00F2
+00F6:  DECFSZ FEF,F
+00F8:  BRA    00E0
+00FA:  GOTO   017A (RETURN)
+00FE:  NOP(FFFF)
+.................... #fuses NOWDT,WDT128,HS, NOPROTECT, NOOSCSEN, BROWNOUT, BORV20, NOPUT, STVREN, NODEBUG, NOLVP, NOWRT, NOWRTD, NOWRTB, NOWRTC, NOCPD, NOCPB, NOEBTR, NOEBTRB  
+*
+00D0:  NOP(FFFF)
+.................... #use rs232(baud=19200,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8)  
+.................... #use i2c(Slave,Slow,sda=PIN_C4,scl=PIN_C3,address=0xA0)  
+....................   
+....................  
+....................   
+.................... #byte port_d   =  0xf83  
+.................... int8 r0,r1,r2,i=0,temp;  
+.................... int8 data[100];  
+....................   
+.................... #int_RDA  
+.................... RDA_isr()  
+.................... {  
+*
+00A4:  NOP(FFFF)
+.................... temp=getc();  
+00A6:  BTFSS  F9E.5
+00A8:  GOTO   00A6
+00AC:  MOVF   FAE,W
+00AE:  MOVWF  1B
+.................... if(temp=='@'){i=0;}  
+00B0:  MOVF   1B,W
+00B2:  SUBLW  40
+00B4:  BTFSC  FD8.2
+00B6:  CLRF   1A
+.................... /*if(temp>31 && temp<128){  
+....................    data[i]=temp;  
+....................    i++;  
+....................     
+.................... }  
+.................... else{i=0;}*/  
+.................... }  
+....................   
+00B8:  BCF    F9E.5
+00BA:  GOTO   0062
+.................... #int_SSP  
+.................... SSP_isr()  
+.................... {  
+00BE:  NOP(FFFF)
+.................... r2=i2c_read();  
+00C0:  BTFSS  FC7.0
+00C2:  GOTO   00C0
+00C6:  MOVFF  FC9,19
+.................... }  
+....................   
+....................   
+....................   
+00CA:  BCF    F9E.3
+00CC:  GOTO   0062
+.................... void main()  
+.................... {  
+*
+0100:  NOP(FFFF)
+0102:  CLRF   FF8
+0104:  BCF    FD0.7
+0106:  BSF    0D.7
+0108:  CLRF   FEA
+010A:  CLRF   FE9
+010C:  MOVLW  06
+010E:  MOVWF  FC1
+0110:  MOVLW  40
+0112:  MOVWF  FAF
+0114:  MOVLW  26
+0116:  MOVWF  FAC
+0118:  MOVLW  90
+011A:  MOVWF  FAB
+011C:  BSF    F94.3
+011E:  BSF    F94.4
+0120:  MOVLW  A0
+0122:  MOVWF  FC8
+0124:  MOVLW  36
+0126:  MOVWF  FC6
+0128:  CLRF   1A
+....................   
+....................    setup_adc_ports(NO_ANALOGS);  
+012A:  MOVLW  06
+012C:  MOVWF  FC1
+....................    setup_adc(ADC_OFF);  
+012E:  BCF    FC1.6
+0130:  MOVF   FC2,W
+0132:  ANDLW  38
+0134:  MOVWF  FC2
+....................    setup_psp(PSP_DISABLED);  
+0136:  BCF    F96.4
+....................    setup_wdt(WDT_OFF);  
+0138:  BCF    FD1.0
+....................    setup_timer_0(RTCC_INTERNAL);  
+013A:  MOVLW  80
+013C:  MOVWF  FD5
+....................    setup_timer_1(T1_DISABLED);  
+013E:  CLRF   FCD
+....................    setup_timer_2(T2_DISABLED,0,1);  
+0140:  MOVLW  00
+0142:  MOVWF  01
+0144:  MOVWF  FCA
+0146:  MOVLW  00
+0148:  MOVWF  FCB
+....................    setup_timer_3(T3_DISABLED|T3_DIV_BY_1);  
+014A:  MOVF   FB1,W
+014C:  ANDLW  48
+014E:  MOVWF  FB1
+....................    enable_interrupts(INT_RDA);  
+0150:  BSF    F9D.5
+....................    enable_interrupts(INT_SSP);  
+0152:  BSF    F9D.3
+....................    enable_interrupts(GLOBAL);  
+0154:  MOVLW  C0
+0156:  IORWF  FF2,F
+.................... set_tris_c(0x91);  
+0158:  MOVLW  91
+015A:  MOVWF  F94
+.................... set_tris_d(0x00);  
+015C:  MOVLW  00
+015E:  MOVWF  F95
+.................... port_d=0;  
+0160:  CLRF   F83
+.................... data[3]=1;  
+0162:  MOVLW  01
+0164:  MOVWF  1F
+.................... for(;;){  
+....................    if(i==0){  
+0166:  MOVF   1A,F
+0168:  BTFSS  FD8.2
+016A:  GOTO   01C6
+....................    delay_ms(1000);  
+016E:  MOVLW  04
+0170:  MOVWF  x80
+0172:  MOVLW  FA
+0174:  MOVWF  x81
+0176:  GOTO   00D0
+017A:  DECFSZ x80,F
+017C:  BRA    0172
+....................    i=10;  
+017E:  MOVLW  0A
+0180:  MOVWF  1A
+....................       port_d=data[3];  
+0182:  MOVFF  1F,F83
+....................       putc('#');  
+0186:  MOVLW  23
+0188:  BTFSS  F9E.4
+018A:  GOTO   0188
+018E:  MOVWF  FAD
+....................        
+....................       putc('C');//delay_ms(100);  
+0190:  MOVLW  43
+0192:  BTFSS  F9E.4
+0194:  GOTO   0192
+0198:  MOVWF  FAD
+....................       putc('1');//delay_ms(100);  
+019A:  MOVLW  31
+019C:  BTFSS  F9E.4
+019E:  GOTO   019C
+01A2:  MOVWF  FAD
+....................       putc(' ');//delay_ms(100);  
+01A4:  MOVLW  20
+01A6:  BTFSS  F9E.4
+01A8:  GOTO   01A6
+01AC:  MOVWF  FAD
+....................       putc(data[3]);//delay_ms(100);  
+01AE:  MOVF   1F,W
+01B0:  BTFSS  F9E.4
+01B2:  GOTO   01B0
+01B6:  MOVWF  FAD
+....................       putc(13);  
+01B8:  MOVLW  0D
+01BA:  BTFSS  F9E.4
+01BC:  GOTO   01BA
+01C0:  MOVWF  FAD
+....................       data[1]=0;  
+01C2:  CLRF   1D
+....................       data[0]=0;  
+01C4:  CLRF   1C
+....................              //delay_ms(3000);    
+....................                
+....................    }       
+....................      
+.................... }  
+01C6:  GOTO   0166
+.................... }  
+....................  
+01CA:  SLEEP 
+
+Configuration Fuses:
+   Word  1: 2200   HS NOOSCSEN
+   Word  2: 0E0F   BROWNOUT WDT128 NOWDT BORV20 NOPUT
+   Word  3: 0100   CCP2C1
+   Word  4: 0081   STVREN NODEBUG NOLVP
+   Word  5: C00F   NOPROTECT NOCPD NOCPB
+   Word  6: E00F   NOWRT NOWRTD NOWRTB NOWRTC
+   Word  7: 400F   NOEBTR NOEBTRB

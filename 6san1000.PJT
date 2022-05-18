@@ -1,0 +1,35 @@
+[PROJECT]
+Target=6san1000.HEX
+Development_Mode=
+Processor=0x845F
+ToolSuite=CCS
+
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=6san1000.c;
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+
+[6san1000.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=6san1000.c
+
+[Windows]
+0=0000 6san1000.c 0 0 796 451 3 0
+
+[Opened Files]
+1=C:\Users\User\Documents\Azaa_1\TURSHILT\6san1000.c
+2=

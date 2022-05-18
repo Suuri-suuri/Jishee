@@ -1,0 +1,67 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @SCRATCH
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     r0
+018     r1
+019     r2
+01A     i
+01B     temp
+01C-07F data
+080     main.@SCRATCH
+081     @delay_ms1.P1
+F83     port_d
+F83     PSP_DATA
+FBB-FBC CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE-FBF CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+
+00D0  @delay_ms1
+00A4  RDA_isr
+00BE  SSP_isr
+0100  main
+0102  @cinit
+
+Project Files:
+    C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.c
+    C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.h
+    C:\Program Files (x86)\PICC\devices\18F452.h
+
+Compiler Settings:
+    Processor:      PIC18F452
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.err
+    INHX32:      C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.HEX
+    Symbols:     C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.SYM
+    List:        C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.LST
+    Debug/COFF:  C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.cof
+    Call Tree:   C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.tre
+    Statistics:  C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.sta

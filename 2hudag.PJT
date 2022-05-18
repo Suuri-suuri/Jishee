@@ -1,0 +1,36 @@
+[PROJECT]
+Target=2hudag.HEX
+Development_Mode=
+Processor=0x845F
+ToolSuite=CCS
+
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=2hudag.c;
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+
+[2hudag.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=2hudag.c
+
+[Windows]
+0=0000 2hudag.c 0 0 796 451 3 0
+
+[Opened Files]
+1=D:\Ajil\Codes\PIC\TURSHILT\2hudag.c
+2=
+3=

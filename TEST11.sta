@@ -1,0 +1,32 @@
+
+ROM used: 456 (1%)
+          456 (1%) including unused fragments
+
+          1 Average locations per line
+          13 Average locations per statement
+
+RAM used: 129 (8%) at main() level
+          130 (8%) worst case
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   66    35 100  C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.c
+    8     0   0  C:\Users\User\Documents\Azaa_1\TURSHILT\TEST11.h
+  286     0   0  C:\Program Files (x86)\PICC\devices\18F452.h
+----- -----
+  720    70 Total
+
+Page ROM  %  RAM  Functions:
+---- --- --- ---  ----------
+0     48   5   1  @delay_ms1
+0     26   3   0  RDA_isr
+0     18   2   0  SSP_isr
+0    204  22   1  main
+
+ Segment   Used  Free
+---------  ----  ----
+00000-00002     4  0
+00004-00006     0  4
+00008-000A2   156  0
+000A4-07FFE   296  32308
+

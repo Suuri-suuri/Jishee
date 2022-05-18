@@ -1,0 +1,98 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @SCRATCH
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     temp
+018     i
+019     a0
+01A     a1
+01B     a2
+01C     a3
+01D     a4
+01E     a5
+01F     a6
+020     a7
+021     a8
+022-035 data
+036-03F numb
+040     n1
+041     n2
+042     n3
+043     tmp
+044     rh
+045     p1
+046     p2
+047     h1
+048     smoke
+049     blok
+04A     dundaj
+04B     j
+04C-04D r0
+04E-04F r10
+050-051 @DIV1616.P1
+050     @DIV88.P2
+050     main.@SCRATCH
+051     @delay_ms1.P1
+051     @DIV88.P2
+052-053 @DIV1616.P1
+052     @DIV88.@SCRATCH
+054     @DIV1616.@SCRATCH
+F80     port_a
+F81     port_b
+F83     port_d
+F83     PSP_DATA
+F84     port_e
+FBB     CCP_2_LOW
+FBB-FBC CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE-FBF CCP_1
+FBF     CCP_1_HIGH
+
+00F2  @delay_ms1
+0098  RDA_isr
+01AE  main
+0120  @DIV1616
+017A  @DIV88
+01B0  @cinit
+
+Project Files:
+    C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.c
+    C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.h
+    C:\Program Files (x86)\PICC\devices\18F452.h
+
+Compiler Settings:
+    Processor:      PIC18F452
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.err
+    INHX32:      C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.HEX
+    Symbols:     C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.SYM
+    List:        C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.LST
+    Debug/COFF:  C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.cof
+    Call Tree:   C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.tre
+    Statistics:  C:\Users\User\Documents\Azaa_1\TURSHILT\11hudag3.sta

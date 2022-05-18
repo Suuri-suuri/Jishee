@@ -1,0 +1,118 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @SCRATCH
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     i
+018     a0
+019     a1
+01A     a2
+01B     a3
+01C     a4
+01D     a5
+01E     a6
+01F     a7
+020     a8
+021-034 data
+035-03E numb
+03F     n1
+040     n2
+041     n3
+042     temp2
+043     p1
+044     p2
+045     h1
+046     smoke
+047     blok
+048     dundaj
+049     j
+04A-04B r0
+04C-04D r10
+04E-05B message1
+05C-069 message2
+06A.0   Time_out
+06B     T_byte1
+06C     T_byte2
+06D     RH_byte1
+06E     RH_byte2
+06F     CheckSum
+070-071 RH
+072-073 Temp
+074     Read_Data.i1
+074     @DIV88.P1
+074     check_response.@SCRATCH
+074     main.@SCRATCH
+075     Read_Data.k
+075     @DIV88.P1
+075     @delay_ms1.P2
+075     main.@SCRATCH
+076     Read_Data._data
+076-077 @DIV1616.P1
+076     main.@SCRATCH
+076     @DIV88.@SCRATCH
+077     Read_Data.@SCRATCH
+078-079 @DIV1616.P1
+07A     @DIV1616.@SCRATCH
+F80     port_a
+F81     port_b
+F82.0   dat0
+F83     PSP_DATA
+F83     port_d
+F84     port_e
+FBB-FBC CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE-FBF CCP_1
+FBF     CCP_1_HIGH
+
+0122  @delay_ms1
+0098  RDA_isr
+00F8  @goto10034
+0150  start_signal
+0178  check_response
+01C0  Read_Data
+0338  main
+02AA  @DIV1616
+0304  @DIV88
+033A  @cinit
+
+Project Files:
+    C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.c
+    C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.h
+    C:\Program Files (x86)\PICC\devices\18F452.h
+
+Compiler Settings:
+    Processor:      PIC18F452
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.err
+    INHX32:      C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.HEX
+    Symbols:     C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.SYM
+    List:        C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.LST
+    Debug/COFF:  C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.cof
+    Call Tree:   C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.tre
+    Statistics:  C:\Users\User\Documents\Azaa_1\TURSHILT\5denj.sta
